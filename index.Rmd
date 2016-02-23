@@ -1,8 +1,33 @@
+#INFO498F Survey 
+
 ```{r, echo=FALSE, message=FALSE}
+library(plotly)
+library(dplyr)
+
 #Read in the functions in other files
-setwd("./INFO-498F-a7-anythinginfo")
 source("scripts/Chart1.R")
 source("scripts/Chart2.R")
-source("summary.R")
+source("scripts/summary.R")
 source("README.md")
+
+#Read in the data
+summary_information <- info_summary(data)
+```
+
+
+
+Here is a scatter plot showing the classes of students grouped by the
+number of countries they have visited before:
+
+```{r, echo=FALSE, message=FALSE}
+#Pass the data to render chart 1
+class_travel(data)
+```
+
+Here is a bar chart showing the classes of students grouped by saying yes, no, N/A, or
+maybe when asked if they wanted to apply to informatics:
+
+```{r, echo=FALSE, message=FALSE}
+#Pass the data to render chart 2
+class_major(data)
 ```
