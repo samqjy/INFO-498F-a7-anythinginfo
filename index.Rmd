@@ -1,0 +1,6 @@
+```{r, echo=FALSE, message=FALSE}
+#Read in the functions in other files
+setwd("./INFO-498F-a7-anythinginfo")
+source("scripts/Chart1.R")
+source("scripts/Chart2.R")
+```
