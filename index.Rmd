@@ -11,10 +11,19 @@ source("scripts/summary.R")
 source("README.md")
 
 #Read in the data
-summary_information <- info_summary(data)
+data <- read.csv("https://raw.githubusercontent.com/INFO-498F/a7-survey-data/master/intro_survey_data.csv")
+
+summary <- info_summary(data)
 ```
 
-There are a total of `r summary_information$num` students in class; there are `r summary_information$numFreshmen` freshmen, `r summary_information$numSophomore` sophomores, `r summary_information$numJunior` juniors, and `r summary_information$numSenior` seniors. `r summary_information$numWindows` of the students are Windows users, and `r summary_information$numMac` of the students are Mac users.
+###Summary 
+This report analyzes the data collected from a survey given to students of INFO 498's Technical Foundations of Informatics class. The survey included questions such as student's class standing, whether they were interested in the Informatics program or not, what their programming experiences were, and how many countries they've visited among several other questions. 
+
+Among `r summary$total_students` of those who took the survey: `r summary$freshman` were freshmen, `r summary$sophomore` were sophomores, `r summary$junior` were juniors, and `r summary$senior` were seniors. Out of `r summary$total_student`, about `r summary$applying` students reported that they were planning on applying to the Informatics program. In addition, through the dataset, we were able to get a better understanding of students' experience with programming and more specifically, R programming. From the dataset, at least `r summary$total - summary$no_exp` students had some type of experience with programming, but only `r summary$r_experience` had experience with R.  
+
+Finally, the survey allowed us to gather some fun facts about the students. An example of this is the most number of countries visited by a student, which is `r summary$most_countries`.  
+
+###Visualizations
 
 Here is a scatter plot showing the classes of students grouped by the
 number of countries they have visited before:
