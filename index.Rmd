@@ -14,7 +14,7 @@ source("README.md")
 summary_information <- info_summary(data)
 ```
 
-
+There are a total of `r summary_information$num` students in class; there are `r summary_information$numFreshmen` freshmen, `r summary_information$numSophomore` sophomores, `r summary_information$numJunior` juniors, and `r summary_information$numSenior` seniors. `r summary_information$numWindows` of the students are Windows users, and `r summary_information$numMac` of the students are Mac users.
 
 Here is a scatter plot showing the classes of students grouped by the
 number of countries they have visited before:
